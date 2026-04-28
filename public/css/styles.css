@@ -1,13 +1,21 @@
 /* Global */
 html, body {
+    height: 100%;
+    margin: 0;
     overflow-x: hidden;
+    background: url('../images/background.png') center/cover no-repeat fixed;
 }
 
 body {
     margin: 0;
     font-size: 40pt;
-    color: #444;
-    background: #53050C;
+    color: #e5e1c7;
+    /* background: rgb(229, 225, 199); 390408 */
+    /* background:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05), transparent 60%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.04), transparent 60%),
+        linear-gradient(135deg, #390408, #2c0306);
+    background-blend-mode: overlay; */
 }
 
 /* Fonts */
@@ -37,7 +45,11 @@ body {
 
 
 /* for smaller displays */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+    .hero {
+        background-position: 54% center !important;
+    }
+
     .hero-content {
         top: 1.5rem;
         left: 1.5rem;
@@ -61,11 +73,13 @@ body {
     }
 
     .hero-content-bottom-banner {
-        bottom: -2rem !important;
+        bottom: 2.5rem !important;
+        right: -1.15rem !important;
     }
 
     .names {
         font-size: 65pt !important;
+        line-height: 0.88 !important;
     }
 
     .date {
@@ -73,30 +87,50 @@ body {
     }
 
     .scroll-indicator {
-        bottom: -0.25rem !important;
-        font-size: 70pt !important;
+        /* bottom: -0.75rem !important; */
+        font-size: 35pt !important;
     }
 }
 
+@keyframes pulseGlow {
+    0% {
+        box-shadow:
+            0 0 20px rgba(16, 31, 18, 0.45),
+            0 0 35px rgba(16, 31, 18, 0.35);
+    }
+    50% {
+        box-shadow:
+            0 0 35px rgba(16, 31, 18, 0.85),
+            0 0 55px rgba(16, 31, 18, 0.55);
+    }
+    100% {
+        box-shadow:
+            0 0 20px rgba(16, 31, 18, 0.45),
+            0 0 35px rgba(16, 31, 18, 0.35);
+    }
+}
 
 /* Hero */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.50)),
-                url('../images/6D40CC4C-C634-4D60-8605-AB55EE5D64CE.jpeg') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.40)),
+                url('../images/6D40CC4C-C634-4D60-8605-AB55EE5D64CE.jpeg') center/cover no-repeat fixed;
     display: flex;
-    color: white;
+    color: #e5e1c7;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
+
+    /* The glow */
+    animation: pulseGlow 3s ease-in-out infinite;
 }
 
 .hero-content-quote {
     position: absolute;
     top: 2rem;
     left: 3rem;
-    text-align: justify;
+    /* text-align: justify; */
     width: 40%;
 }
 
@@ -120,7 +154,7 @@ body {
 
 .hero-content-bottom-banner {
     position: absolute;
-    bottom: -11rem;
+    bottom: 0rem;
     right: 0rem;
     padding: 2rem 3rem;
     text-align: right;
@@ -133,13 +167,17 @@ body {
 .names {
     font-size: 140pt;
     font-weight: 300;
-    line-height: 0.75;
+    line-height: 0.65;
 }
 
 .date,
 .location {
     /* margin: 0.3rem 0; */
-    font-size: 95pt;
+    font-size: 80pt;
+}
+
+.hero-content-bottom-banner .names p {
+    margin: 0;
 }
 
 
@@ -174,9 +212,10 @@ body {
 
 .scroll-indicator {
     position: absolute;
-    bottom: -1.5rem;      /* same as your banner */
+    font-family: 'Gill Sans';
+    bottom: 1rem;     /* same as your banner */
     left: 50%;
-    font-size: 105pt;
+    font-size: 50pt; /* 105pt */
     opacity: 0.8;
     z-index: 2;
     animation: 
@@ -186,22 +225,6 @@ body {
     cursor: pointer;
 }
 
-/* Button */
-.btn-primary {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.8rem 2rem;
-    background: #b28d6e;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: 0.2s;
-}
-
-.btn-primary:hover {
-    background: #9c785c;
-}
-
 
 /* Nav */
 .nav {
@@ -209,7 +232,7 @@ body {
     justify-content: center;
     gap: 2rem;
     padding: 1rem;
-    background: #d4b99d;
+    background: #e5e1c7; /*d4b99d */
     border-bottom: 1px solid #d4b99d;
 }
 
@@ -227,15 +250,16 @@ body {
     text-align: center;
 }
 
-.details-grid {
+.nav-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
 }
 
-.detail-card {
-    background: white;
+.nav-card {
+    background: #390408;
+    color: #e5e1c7;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -244,7 +268,7 @@ body {
 /* Footer */
 .footer {
     text-align: center;
-    padding: 2rem;
-    background: #eee;
+    padding: 1rem;
+    background: #e5e1c7;
     margin-top: 3rem;
 }
