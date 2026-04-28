@@ -17,15 +17,20 @@
     <!-- Hero Scetion -->
     <header class="hero">
         <div class="hero-content-quote">
-            <p class="quote">
-                <q>To the world you may be one person, but to one person you are the world.</q>
+            <p class="quote" id="quoteText">
+                “To the world you may be one person, but to one person you are the world.”
                 <span class="author">&mdash; Dr. Seuss</span>
             </p>
         
         </div>
         <div class="hero-content-bottom-banner passions-conflict-regular">
-            <p class="names">Blythe & Dwayne<br>
-            <span class="date">21<sup>th</sup> July 2027</span></p>
+            <!-- Add a seperate -->
+            <div class="names">
+                <p>Blythe & Dwayne</p>
+            </div>
+            <div class="date">
+                21<sup>th</sup> July 2027
+            </div>
             <!-- <a href="#rsvp" class="btn-primary">RSVP</a> -->
              
             <!-- <div id="rsvp-root"></div>
@@ -38,62 +43,59 @@
 
         <div class="scroll-indicator">
             <span style="display:inline-block; transform: rotate(90deg);">&raquo;</span>
-            <script>
-                document.addEventListener("scroll", () => {
-                    const hero = document.querySelector(".hero");
-                    const indicator = document.querySelector(".scroll-indicator");
-                    
-                    console.log(hero.offsetHeight);
-                    const heroHeight = hero.offsetHeight;
-                    const scrollY = window.scrollY;
-
-                    if (scrollY > heroHeight * 0.4) {
-                        indicator.style.opacity = "0";
-                        indicator.style.pointerEvents = "none";
-                    } else {
-                        indicator.style.opacity = "1";
-                        indicator.style.pointerEvents = "auto";
-                    }
-                });
-            </script>
         </div>
 
     </header>
 
     <!-- Navigation -->
-    <nav class="nav">
-        <a href="#story">Our Story</a>
-        <a href="#details">Details</a>
-        <a href="#rsvp">RSVP</a>
-    </nav>
+    <!-- <nav class="nav"> -->
+        <!-- <a href="#details">The deets</a> Schedule of events -->
+        <!-- <a href="#FAQs">The “Wait, What About…?” Section</a> Dinnae forget yer brolly — it’s meant tae pish doon the day -->
+        <!-- <a herf="#accomodation/travel">Stay & Snooze</a> Renting cars, places to get hotels -->
+        <!-- <a herf="#tourism"></a> -->
+
+        <!-- <a href="#sharedAlbum"></a> -->
+        <!-- <a href="#rsvp">RSVP</a> -->
+    <!-- </nav> -->
 
     <!-- OUR STORY -->
-    <section id="story" class="section">
+    <!-- <section id="story" class="section">
         <h2>Our Story</h2>
         <p>
             Write a short intro here — how you met, the proposal, or something sweet.
             Keep it light and personal.
         </p>
-    </section>
+    </section> -->
 
     <!-- WEDDING DETAILS -->
     <section id="details" class="section">
-        <h2>Wedding Details</h2>
+        <!-- <h2>Wedding Details</h2>    -->
 
-        <div class="details-grid">
-            <div class="detail-card">
-                <h3>Ceremony</h3>
-                <p>2:00 PM at [Venue Name]</p>
+        <div class="nav-grid parisienne-regular">
+            <div class="nav-card" href="#details">
+                <h3>The Deets</h3>
             </div>
 
-            <div class="detail-card">
+            <div class="nav-card" href="#FAQs">
+                <h3>The “Wait, What About…?” Section</h3>
+            </div>
+
+            <div class="nav-card" href="#accomodation/travel">
+                <h3>Stay & Snooze</h3>
+            </div>
+
+            <div class="nav-card" href="#tourism">
+                <h3></h3>
+            </div>
+
+            <div class="nav-card" href="#sharedAlbum">
                 <h3>Reception</h3>
                 <p>4:00 PM at [Venue Name]</p>
             </div>
 
-            <div class="detail-card">
+            <div class="nav-card" href="#rsvp">
                 <h3>Dress Code</h3>
-                <p>Smart / Semi‑formal</p>
+                <p>Smart / Semi-formal</p>
             </div>
         </div>
     </section>
@@ -106,8 +108,10 @@
     </section>
 
     <footer class="footer">
-        <p>Made with love by Blythe</p>
+        <!-- <p>Made with love by Blythe</p> -->
     </footer>
+
+    <script src="../js/effects.js"></script>
 
 </body>
 
