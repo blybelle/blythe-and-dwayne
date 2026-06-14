@@ -43,6 +43,32 @@ body {
   font-style: normal;
 }
 
+.homemade-apple-regular {
+  font-family: "Homemade Apple", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cedarville-cursive-regular {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.corinthia-regular {
+  font-family: "Corinthia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.corinthia-bold {
+  font-family: "Corinthia", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
 
 /* for smaller displays */
 @media (max-width: 800px) {
@@ -90,6 +116,12 @@ body {
         /* bottom: -0.75rem !important; */
         font-size: 35pt !important;
     }
+
+    .nav-card:scroll {
+        flex: 6;
+        filter: #101f12(0) brightness(1.15);
+    }
+
 }
 
 @keyframes pulseGlow {
@@ -255,20 +287,61 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
+    font-size: xx-large;
+    display: flex;
+    gap: 1vmin;
+}
+
+.nav-grid h3 {
+    font-weight: 400;
+    /* font-size: large; */
 }
 
 .nav-card {
-    background: #390408;
-    color: #e5e1c7;
+    position: relative;
+    width: 260px;
+    height: 180px;         
+    font-size: x-large;
+    background: url("../images/card_scribble.png") center/cover no-repeat,
+                rgb(57, 4, 8);
+    /* background-blend-mode: multiply; */
+    color: #101f12; /*e5e1c7 */
     padding: 1.5rem;
+    line-height: 2.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    /* transition: flex 0.5s, filter 0.5s; */
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        width 0.45s ease;
 }
+
+/* The “lift + expand” */
+.nav-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+    width: 620px;          /* expands to the right */
+}
+
+/* Hidden content that appears on hover */
+.nav-card .details {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
+}
+
+.nav-card:hover .details {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 
 /* Footer */
 .footer {
     text-align: center;
     padding: 1rem;
-    background: #e5e1c7;
+    background: #101f12;
     margin-top: 3rem;
 }
