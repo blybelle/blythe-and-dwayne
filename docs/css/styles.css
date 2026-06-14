@@ -3,7 +3,7 @@ html, body {
     height: 100%;
     margin: 0;
     overflow-x: hidden;
-    background: url('../images/background.png') center/cover no-repeat fixed;
+    background: url('../../docs/images/background.png') center/cover no-repeat fixed;
 }
 
 body {
@@ -146,7 +146,7 @@ body {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.40)),
-                url('../images/6D40CC4C-C634-4D60-8605-AB55EE5D64CE.jpeg') center/cover no-repeat fixed;
+                url('../../docs/images/6D40CC4C-C634-4D60-8605-AB55EE5D64CE.jpeg') center/cover no-repeat fixed;
     display: flex;
     color: #e5e1c7;
     justify-content: center;
@@ -302,7 +302,7 @@ body {
     width: 260px;
     height: 180px;         
     font-size: x-large;
-    background: url("../images/card_scribble.png") center/cover no-repeat,
+    background: url("../../docs/images/card_scribble.png") center/cover no-repeat,
                 rgb(57, 4, 8);
     /* background-blend-mode: multiply; */
     color: #101f12; /*e5e1c7 */
