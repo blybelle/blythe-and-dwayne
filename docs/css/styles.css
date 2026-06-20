@@ -10,12 +10,15 @@ body {
     margin: 0;
     font-size: 40pt;
     color: #e5e1c7;
+    min-height: 100vh;
     /* background: rgb(229, 225, 199); 390408 */
     /* background:
         radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05), transparent 60%),
         radial-gradient(circle at 80% 70%, rgba(255,255,255,0.04), transparent 60%),
         linear-gradient(135deg, #390408, #2c0306);
     background-blend-mode: overlay; */
+    padding: env(safe-area-inset-top) env(safe-area-inset-right)
+             env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 /* Fonts */
